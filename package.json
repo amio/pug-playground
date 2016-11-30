@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:js && npm run build:html",
-    "build:js": "browserify src/index.js > doc/index.js",
-    "build:html": "pug src/*.pug --out doc",
+    "build": "npm run build:js & npm run build:html",
+    "build:js": "browserify src/index.js > docs/index.js",
+    "build:html": "pug src/*.pug --out docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
