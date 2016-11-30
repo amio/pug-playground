@@ -1,0 +1,22 @@
+{
+  "name": "pug-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:js && npm run build:html",
+    "build:js": "browserify src/index.js > doc/index.js",
+    "build:html": "pug src/*.pug --out doc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Amio <amio.cn@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

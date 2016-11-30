@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  - var title = "PugPlay"
+  head
+    title= title
+    //- link(rel="stylesheet", href="main.css")
+    style: include main.css
+  body
+    header
+      h1 #[em PUG]PLAYGROUND
+    #codes
+      #source
+        .pug
+          textarea(autofocus)
+      #result
+        .html
+          textarea(disabled)
+    script(src="index.js")
