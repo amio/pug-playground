@@ -11,6 +11,9 @@ function initApp () {
     const pugText = ev.target.value
     renderPug(pugText, outputEl)
   })
+
+  // enable tab indent
+  textareaEnableTabIndent(inputEl)
 }
 
 function renderPug (pugText, outputEl) {
@@ -24,4 +27,18 @@ function renderPug (pugText, outputEl) {
     // console.error(e.message)
   }
   outputEl.value = renderResult.trim()
+}
+
+function textareaEnableTabIndent (textarea) {
+  textarea.onkeydown = function(e) {
+      if (e.keyCode == 9 || e.which == 9){
+          e.preventDefault();
+          var oldStart = this.selectionStart;
+          var before   = this.value.substring(0, this.selectionStart);
+          var selected = this.value.substring(this.selectionStart, this.selectionEnd);
+          var after    = this.value.substring(this.selectionEnd);
+          this.value = before + "    " + selected + after;
+          this.selectionEnd = oldStart + 4;
+      }
+  }
 }
