@@ -1,7 +1,8 @@
 {
   "name": "pug-playground",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Pug Playground",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js & npm run build:html",
@@ -13,10 +14,10 @@
   "author": "Amio <amio.cn@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
+    "browserify": "^16",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
