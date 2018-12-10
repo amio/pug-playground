@@ -3,8 +3,8 @@ const pug = require('pug')
 initApp()
 
 function initApp () {
-  const inputEl = document.querySelector('.pug textarea')
-  const outputEl = document.querySelector('.html textarea')
+  const inputEl = document.querySelector('#source textarea')
+  const outputEl = document.querySelector('#result textarea')
 
   // bind input listener
   inputEl.addEventListener('input', ev => {
@@ -37,8 +37,8 @@ function textareaEnableTabIndent (textarea) {
           var before   = this.value.substring(0, this.selectionStart);
           var selected = this.value.substring(this.selectionStart, this.selectionEnd);
           var after    = this.value.substring(this.selectionEnd);
-          this.value = before + "    " + selected + after;
-          this.selectionEnd = oldStart + 4;
+          this.value = before + "  " + selected + after;
+          this.selectionEnd = oldStart + 2;
       }
   }
 }

@@ -29,6 +29,8 @@ h1 em {
   display: flex;
   flex-direction: row;
   padding: 10px;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
 }
 
 #source, #result {
@@ -40,7 +42,7 @@ textarea {
   resize: none;
   border: none;
   width: 100%;
-  height: calc(100vh - 200px);
+  height: 100%;
   box-sizing: border-box;
   padding: 5px;
   font-size: 14px;
