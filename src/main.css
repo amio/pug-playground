@@ -25,6 +25,19 @@ h1 em {
   margin-right: 0.06em;
 }
 
+header a {
+  float: right;
+  font-weight: normal;
+  color: #FFF;
+  opacity: 0.7;
+  text-decoration: none;
+  font-variant: all-small-caps;
+}
+
+header a:hover {
+  opacity: 1;
+}
+
 #codes {
   display: flex;
   flex-direction: row;
