@@ -7,7 +7,7 @@ function initApp () {
   const outputEl = document.querySelector('#result textarea')
 
   // bind input listener
-  inputEl.addEventListener('input', ev => {
+  inputEl.addEventListener('input', function (ev) {
     const pugText = ev.target.value
     renderPug(pugText, outputEl)
   })
@@ -17,7 +17,7 @@ function initApp () {
 }
 
 function renderPug (pugText, outputEl) {
-  let renderResult
+  var renderResult = ''
   try {
     renderResult = pug.render(pugText, { pretty: true })
     outputEl.classList.remove('error')
