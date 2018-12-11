@@ -4,17 +4,18 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "build": "npm run build:js & npm run build:html",
+    "build": "npm run build:html && npm run build:js",
     "build:js": "browserify src/index.js | uglifyjs -c > docs/index.js",
     "build:html": "pug src/*.pug --out docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "now-build": "npm run build"
   },
   "dependencies": {
     "pug": "^2.0.0"
   },
   "devDependencies": {
     "browserify": "^16",
+    "microbundle": "^0.8.3",
     "pug-cli": "^1.0.0-alpha6",
-    "uglifyify": "^5.0.1"
+    "uglify-js": "^3.4.9"
   }
 }

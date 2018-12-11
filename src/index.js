@@ -1,14 +1,14 @@
-const pug = require('pug')
+var pug = require('pug')
 
 initApp()
 
 function initApp () {
-  const inputEl = document.querySelector('#source textarea')
-  const outputEl = document.querySelector('#result textarea')
+  var inputEl = document.querySelector('#source textarea')
+  var outputEl = document.querySelector('#result textarea')
 
   // bind input listener
   inputEl.addEventListener('input', function (ev) {
-    const pugText = ev.target.value
+    var pugText = ev.target.value
     renderPug(pugText, outputEl)
   })
 
